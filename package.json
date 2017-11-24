@@ -1,0 +1,10 @@
+{
+  "name": "tnp_shopback_test",
+  "version": "1.0.0",
+  "dependencies": {
+    "mocha": "^4.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2"
+  }
+}

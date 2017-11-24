@@ -33,7 +33,7 @@ class Spend extends Component {
                 finalCashbackRate = currentCashbackRate;
             }
         });
-        console.log("Cash Back Rate: " + (finalCashbackRate * 100).toFixed(0) + "%" + ", Cash Back Amount: " + (finalCashbackRate * highestAmount).toFixed(2));
+        return "Cash Back Rate: " + (finalCashbackRate * 100).toFixed(0) + "%" + ", Cash Back Amount: " + (finalCashbackRate * highestAmount).toFixed(2);
     }
 }
 

@@ -21,9 +21,9 @@ class Redeem extends Component {
 
         if ('undefined' !== typeof this.responseData) {
             if (domainName && 'undefined' !== typeof this.responseData[domainName]) {
-                console.log(domainName + " => " + this.responseData[domainName].destination);
+                return domainName + " => " + this.responseData[domainName].destination;
             } else {
-                console.log("No valid domain found to redeem");
+                console.error("No valid domain found to redeem");
             }
         }
     }

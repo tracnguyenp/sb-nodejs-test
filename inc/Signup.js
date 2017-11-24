@@ -21,9 +21,9 @@ class Signup extends Component {
 
         if ('undefined' !== typeof this.responseData) {
             if (domainName && 'undefined' !== typeof this.responseData[domainName]) {
-                console.log(domainName + " => " + this.responseData[domainName].unit + " " + this.responseData[domainName].amount);
+                return domainName + " => " + this.responseData[domainName].unit + " " + this.responseData[domainName].amount;
             } else {
-                console.log("No valid domain found to sign up");
+                console.error("No valid domain found to sign up");
             }
         }
     }

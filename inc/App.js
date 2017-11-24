@@ -4,13 +4,10 @@
 class App {
     constructor(configs) {
         this.configs = configs;
+        this.output = null;
     }
 
-    /**
-     *
-     * @param {Array} arrAppArgs
-     */
-    run(arrAppArgs) {
+    run(arrAppArgs, render = true) {
         if ('undefined' !== typeof arrAppArgs[0]) {
             let commandName = arrAppArgs[0];
             if ('undefined' === typeof this[commandName]) {
@@ -20,10 +17,16 @@ class App {
 
             if (false !== this[commandName]) {
                 arrAppArgs.splice(0, 1);
-                this[commandName].execCommand(arrAppArgs);
+                this.output = this[commandName].execCommand(arrAppArgs);
             } else {
-                console.log('Action not registered yet');
+                console.error("Action not registered yet");
             }
+        }
+
+        if (render) {
+            console.log(this.output);
+        } else {
+            return this.output;
         }
     }
 }

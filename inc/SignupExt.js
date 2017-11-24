@@ -21,9 +21,9 @@ class SignupExt extends Signup {
 
         if ('undefined' !== typeof this.responseData) {
             if (domainName && 'undefined' !== typeof this.responseData[domainName]) {
-                console.log(domainName + " override => " + this.responseData[domainName].unit + " " + this.responseData[domainName].amount);
+                return domainName + " override => " + this.responseData[domainName].unit + " " + this.responseData[domainName].amount;
             } else {
-                console.log("No valid domain found");
+                console.error("No valid domain found to sign up");
             }
         }
     }

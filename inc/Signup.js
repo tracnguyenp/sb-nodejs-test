@@ -21,6 +21,7 @@ class Signup extends Component {
 
         if ('undefined' !== typeof this.responseData) {
             if (domainName && 'undefined' !== typeof this.responseData[domainName]) {
+                return "Award bonus: " + this.responseData[domainName].amount.toFixed(2) + " " + this.responseData[domainName].unit;
                 return domainName + " => " + this.responseData[domainName].unit + " " + this.responseData[domainName].amount;
             } else {
                 console.error("No valid domain found to sign up");

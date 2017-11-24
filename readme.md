@@ -1,6 +1,7 @@
 ### Basic Ideas
 - Use Singleton to set up the App for having one instance of application
 - Use Factory Method to define components belong to application
+- Lazy loading, component loaded only when respective action called
 
 ### Configrution
 - Config file consists of basic params for application

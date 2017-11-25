@@ -1,7 +1,7 @@
-require('./inc/base/Base');
+const App = require('./inc/App');
 let mainConfigs = require('./configs/main');
 
-Base.initApp(mainConfigs);
+App.initInstance(mainConfigs);
 
 let arrAppArgs = [];
 process.argv.forEach(function (val, index) {
@@ -10,4 +10,4 @@ process.argv.forEach(function (val, index) {
     }
 });
 
-Base.getApp().run(arrAppArgs);
+App.getInstance().run(arrAppArgs);

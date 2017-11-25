@@ -4,7 +4,7 @@
 let Component = require('./base/Component');
 
 class Redeem extends Component {
-    constructor(configs) {
+    constructor(configs = null) {
         super(configs);
     }
 
@@ -21,11 +21,13 @@ class Redeem extends Component {
 
         if ('undefined' !== typeof this.responseData) {
             if (domainName && 'undefined' !== typeof this.responseData[domainName]) {
-                return domainName + " => " + this.responseData[domainName].destination;
+                return 'Visit ' + this.responseData[domainName].destination + ' to start earning cashback!';
             } else {
                 console.error("No valid domain found to redeem");
             }
         }
+
+        return false;
     }
 }
 

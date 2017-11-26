@@ -1,7 +1,7 @@
 let chai = require('chai');
 let expect = chai.expect;
 
-describe('App Logic', function () {
+describe('App ®Logic', function () {
     const App = require('../inc/App');
     let mainConfigs = {
         'mainConfigs': {

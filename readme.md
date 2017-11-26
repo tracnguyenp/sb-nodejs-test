@@ -3,7 +3,7 @@
 - Use Factory Method to define components belong to application
 - Lazy loading, component loaded only when respective action called
 
-### Configrution
+### Configuration
 - Config file consists of basic params for application
 - Each component declared in config file to serve a single action of application
 - Data passed to component defined the behaviors of action
@@ -52,3 +52,9 @@
         }
     }
     ```
+
+### Examples and Test
+- `node shopback-calculator.js signup www.shopback.sg`
+- `node shopback-calculator.js redeem www.shopback.com`
+- `node shopback-calculator.js spend  20 100.3 19 4.4`
+- npm install --dev then `./node_modules/mocha/bin/mocha tests` to run the test

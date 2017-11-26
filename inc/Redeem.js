@@ -9,7 +9,7 @@ class Redeem extends Component {
     }
 
     /**
-     * Return the initial reward for signing up
+     * Return the URL for user to redeem
      *
      * @param {Array} arrArgs
      */

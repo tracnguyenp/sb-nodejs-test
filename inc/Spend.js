@@ -9,7 +9,11 @@ class Spend extends Component {
     }
 
     /**
-     * Return the initial reward for signing up
+     * Calculate the cashback based on the spending amounts
+     * All amounts >= 50, cashback = 20% highest amount
+     * All amounts >= 20 (< 50), cashback = 15% highest amount
+     * All amounts >= 10 (< 20), cashback = 10% highest amount
+     * 5% highest amount for other cases
      *
      * @param {Array} arrArgs argument received from the command console
      */

@@ -2,6 +2,13 @@
  * Created by tracnguyen on 11/23/17.
  */
 class ComponentFactory {
+    /**
+     * Use to initialize component from factory
+     *
+     * @param {string} componentName
+     * @param {object} configs
+     * @returns {boolean}
+     */
     static initComponent(componentName, configs) {
         let fs = require('fs');
         let classFilePath;
